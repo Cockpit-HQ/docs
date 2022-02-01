@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://getcockpit.com" target="_blank"><img src="/images/logo.svg" width="256"></a>
+    <a href="https://getcockpit.com" target="_blank"><img src="/docs/.vuepress/public/images/logo.svg" width="256"></a>
 </p>
 
 # The official Cockpit documentation
