@@ -1,0 +1,19 @@
+# Common
+*~
+*.diff
+*.patch
+.DS_Store
+.project
+.settings
+.idea
+.vscode
+.env
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+# Vuepress
+package-lock.json
+/docs/.vuepress/.cache/*
+/docs/.vuepress/.temp/*
+/docs/.vuepress/dist/
+/node_modules
