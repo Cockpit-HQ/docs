@@ -10,7 +10,7 @@ Cockpit's documentation is built on top of [Vuepress](https://v2.vuepress.vuejs.
 
 1. Clone this repository
 2. run `npm install`
-3. run `npm docs:dev`
+3. run `npm run docs:dev`
 4. Navigate to *http://localhost:8080* inside your browser
 5. View the documentation
 
