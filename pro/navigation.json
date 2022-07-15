@@ -1,0 +1,73 @@
+[
+    {
+        "text": "Introduction",
+        "children": [
+          {
+            "text": "About",
+            "link": "/introduction/about"
+          }
+        ]
+    },
+    {
+        "text": "CloudStorage",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/cloudstorage/introduction"
+          }
+        ]
+    },
+    {
+        "text": "Layout",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/layout/introduction"
+          }
+        ]
+    },
+    {
+        "text": "Lokalize",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/lokalize/introduction"
+          },
+          {
+            "text": "API",
+            "link": "/lokalize/api"
+          }
+        ]
+    },
+    {
+        "text": "Pages",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/pages/introduction"
+          },
+          {
+            "text": "API",
+            "link": "/pages/api"
+          }
+        ]
+    },
+    {
+        "text": "Sync",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/sync/introduction"
+          }
+        ]
+    },
+    {
+        "text": "Webhooks",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/webhooks/introduction"
+          }
+        ]
+    }
+]

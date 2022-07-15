@@ -1,0 +1,82 @@
+[
+    {
+        "text": "Introduction",
+        "children": [
+          {
+            "text": "About",
+            "link": "/introduction/about"
+          }
+        ]
+    },
+
+    {
+      "text": "Quickstart",
+      "children": [
+        {
+            "text": "Requirements",
+            "link": "/quickstart/requirements",
+            "children": []
+        },
+        {
+          "text": "Installation",
+          "link": "/quickstart/installation",
+          "children": []
+        },
+        {
+          "text": "Configuration",
+          "link": "/quickstart/configuration",
+          "children": []
+        }
+      ]
+    },
+
+    {
+      "text": "Concepts",
+      "children": [
+        {
+            "text": "Users",
+            "link": "/concepts/users",
+            "children": []
+        },
+        {
+          "text": "Assets",
+          "link": "/concepts/assets",
+          "children": []
+        },
+        {
+          "text": "Content",
+          "link": "/concepts/content",
+          "children": []
+        },
+        {
+          "text": "Localization",
+          "link": "/concepts/localization",
+          "children": []
+        },
+        {
+          "text": "Roles & Permissions",
+          "link": "/concepts/roles-permissions",
+          "children": []
+        },
+        {
+          "text": "Field Types",
+          "link": "/concepts/field-types",
+          "children": []
+        }
+      ]
+    },
+
+    {
+      "text": "Api",
+      "children": [
+        {
+          "text": "Authentication",
+          "link": "/api/authentication"
+        },
+        {
+          "text": "Endpoints",
+          "link": "/api/endpoints"
+        }
+      ]
+  }
+]
