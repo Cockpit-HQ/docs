@@ -10,7 +10,7 @@ A content model consists of the fields you define, with each field belonging to 
 
 ![Screenshot of the form for creating a content model](./create-content-model.png)
 
-## Collections
+## Collection
 
 ### The basics
 
@@ -50,11 +50,17 @@ The following sections describes how collections work by example. Other examples
     * continue to add items by starting at 1. again
     * or stop here and use your content
 
-## Singletons
+## Singleton
 
 For *Singletons* we keep the documentation rather short because basically a singleton works the same way the [Collection](#collections) content model does.
 
 The one and only major difference is, that for a singleton content model only one item exists. You would use a singleton whenever creating multiple items of the content model does not make sense at all.
+
+## Tree
+
+Content models of the type *tree* allows you to manage your content in a so called tree structure or in a parent / child model. This is usefull if you want to manage e.g. nested categories or implement anything that involves a need for a hirarchy for content items.
+
+![Screenshot of content items organized in a tree](./tree-content-model.png)
 
 ## Further reading
 
