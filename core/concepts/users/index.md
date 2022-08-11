@@ -9,7 +9,7 @@ Cockpit's user system is basically role based. Each user is assigned to a [Role]
 As a cockpit user you can
 
 * log in to the administration panel
-* request [API](/api/endpoints/) endpoints
+* request [API](/api/introduction) endpoints
 
 with access to endpoints, features and resources you got permission to.
 

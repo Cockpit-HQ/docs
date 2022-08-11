@@ -64,4 +64,4 @@ Content models of the type *tree* allows you to manage your content in a so call
 
 ## Further reading
 
-* Detailed information about fetching content from the Cockpit API can be found at [API](/api/endpoints/#content).
+* Detailed information about fetching content from the Cockpit API can be found at [API](/api/content).

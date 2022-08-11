@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Use Cockpit's locales settings and localization features whenever you need to translate your content in [Collections](/concepts/content/#collections) or  [Singletons](/concepts/content/#singletons).
+Use Cockpit's locales settings and localization features whenever you need to translate your content in [content items](/concepts/content).
 
 *Locales* define the languages you want to use in your content. Define and use locals whenever you want to provide content in different translations.
 

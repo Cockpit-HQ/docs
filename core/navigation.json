@@ -70,12 +70,20 @@
       "text": "Api",
       "children": [
         {
+          "text": "Introduction",
+          "link": "/api/introduction"
+        },
+        {
           "text": "Authentication",
           "link": "/api/authentication"
         },
         {
-          "text": "Endpoints",
-          "link": "/api/endpoints"
+          "text": "Assets",
+          "link": "/api/assets"
+        },
+        {
+          "text": "Content",
+          "link": "/api/content"
         }
       ]
   }

@@ -6,6 +6,8 @@
 
 You ask yourself what assets are? Some of the most important assets on most websites are images and documents.
 
+![Screenshot of the assets manager](./assets-manager.png)
+
 ## How to manage assets
 
 Cockpit provides you with a couple of out-of-the box features, that make managing assets pretty straightforward:
@@ -23,4 +25,4 @@ As soon as an asset was uploaded you can edit title and description as well as a
 
 ## Further reading
 
-* Detailed information about fetching assets from the Cockpit API can be found at [API](/api/endpoints/#assets).
+* Detailed information about fetching assets from the Cockpit API can be found at [API](/api/assets).

@@ -8,12 +8,12 @@ Endpoint: `GET /pages/menus`
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/menus" \
+curl -X GET "https://cockpit.tld/api/pages/menus" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/menus', {
+fetch('https://cockpit.tld/api/pages/menus', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -34,12 +34,12 @@ Example: For a menu *main* the menu data can be fetched using the following requ
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/menu/main" \
+curl -X GET "https://cockpit.tld/api/pages/menu/main" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/menu/main', {
+fetch('https://cockpit.tld/api/pages/menu/main', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -58,12 +58,12 @@ Endpoint: `GET /pages/pages`
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/pages" \
+curl -X GET "https://cockpit.tld/api/pages/pages" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/pages', {
+fetch('https://cockpit.tld/api/pages/pages', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -87,12 +87,12 @@ Example: For a page with slug *home* the data can be fetched using the following
 
 ```bash
 # Note: the route GET param is URL decoded: /home => %2Fhome
-curl -X GET "https://cockpit.example.com/api/pages/page?route=%2Fhome" \
+curl -X GET "https://cockpit.tld/api/pages/page?route=%2Fhome" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/page?route=/home', {
+fetch('https://cockpit.tld/api/pages/page?route=/home', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -113,12 +113,12 @@ Example: For a page with id *3bfc72d9343631c575000111* the data can be fetched u
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/page/3bfc72d9343631c575000111" \
+curl -X GET "https://cockpit.tld/api/pages/page/3bfc72d9343631c575000111" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/page/3bfc72d9343631c575000111', {
+fetch('https://cockpit.tld/api/pages/page/3bfc72d9343631c575000111', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -137,12 +137,12 @@ Endpoint: `GET /pages/routes`
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/routes" \
+curl -X GET "https://cockpit.tld/api/pages/routes" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/routes', {
+fetch('https://cockpit.tld/api/pages/routes', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -161,12 +161,12 @@ Endpoint: `GET /pages/settings`
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/settings" \
+curl -X GET "https://cockpit.tld/api/pages/settings" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/settings', {
+fetch('https://cockpit.tld/api/pages/settings', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
@@ -185,12 +185,12 @@ Endpoint: `GET /pages/sitemap`
 
 
 ```bash
-curl -X GET "https://cockpit.example.com/api/pages/sitemap" \
+curl -X GET "https://cockpit.tld/api/pages/sitemap" \
  -H "api-key: USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
 ```
 
 ```javascript
-fetch('https://cockpit.example.com/api/pages/sitemap', {
+fetch('https://cockpit.tld/api/pages/sitemap', {
   method: 'GET',
   headers: {
     "api-key": "USR-b2a6ef408b69a2ea86ea065a6d2301a8b4a535bc"
