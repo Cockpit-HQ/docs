@@ -339,6 +339,19 @@ Example result:
 }
 ```
 
+Display the value of a field within the set in the form.
+"Field settings" > "Options" > "Display":
+
+```
+${data.someFieldName}
+```
+
+If the field name is named using kebab case (generally not recommended), the following syntax will display the content of a field within the set in the form:
+
+```
+${data['some-field-name']}
+```
+
 ### Text
 
 The *Text* field displays a simple text input.
