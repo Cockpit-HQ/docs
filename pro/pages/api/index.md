@@ -73,6 +73,29 @@ fetch('https://cockpit.tld/api/pages/pages', {
 .then(response => console.log(response));
 ```
 
+#### Parameters
+
+-
+  **filter**
+  Url encoded filter json
+  type: json
+-
+  **sort**
+  Url encoded sort json
+  type: json
+-
+  **fields**
+  Url encoded fields projection as json
+  type: json
+-
+  **limit**
+  Max amount of items to return
+  type: int
+-
+  **skip**
+  Amount of items to skip
+  type: int
+
 
 ## Page
 

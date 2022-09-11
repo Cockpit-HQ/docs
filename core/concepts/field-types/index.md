@@ -109,6 +109,11 @@ Example result:
 }
 ```
 
+** Options **
+
+- `display`: Displey preview of linked content item.
+  Example: `${data.title}`
+
 ### Date
 
 The *Date* field displays a simple date picker to choose a date from.

@@ -62,6 +62,11 @@
           "text": "Field Types",
           "link": "/concepts/field-types",
           "children": []
+        },
+        {
+          "text": "CLI",
+          "link": "/concepts/cli",
+          "children": []
         }
       ]
     },
