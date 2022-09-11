@@ -29,7 +29,7 @@ The following sections describes how collections work by example. Other examples
     * Display name: `Employee`
 6. Continue by adding a field to the model by clicking *plus*
 7. Fill in the fields
-    * Name: `name`
+    * Name: `name` (camel case recommended. E.g. `nickName`)
     * Type: `Text` (default)
     * Display name: `Name`
     * Required: `yes`
