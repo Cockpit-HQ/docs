@@ -19,6 +19,7 @@ Only if you plan to use Redis and MongoDB for data storage, you might need to do
 
 * CURL
 * DOM
+* Fileinfo
 * GD
 * JSON
 * OpenSSL
