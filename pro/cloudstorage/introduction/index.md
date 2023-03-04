@@ -3,7 +3,7 @@
 The CloudStorage addon adds support for cloud storage providers to store assets or thumbnails.
 
 :::info
-Currently only Amazon S3 is supported but more providers are already in the pipeline.
+Currently only Amazon S3 and services having a S3 compatible api are supported.
 :::
 
 

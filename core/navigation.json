@@ -64,6 +64,11 @@
           "children": []
         },
         {
+          "text": "Spaces",
+          "link": "/concepts/spaces",
+          "children": []
+        },
+        {
           "text": "CLI",
           "link": "/concepts/cli",
           "children": []

@@ -9,7 +9,7 @@ Only if you plan to use Redis and MongoDB for data storage, you might need to do
 
 ## General
 
-* PHP >= 8.0
+* PHP >= 8.1
 * PDO with SQLite support or [mongodb extension](https://pecl.php.net/package/mongodb) to use MongoDB as data storage
 * Apache (with mod_rewrite enabled) or nginx
 * Any modern browser

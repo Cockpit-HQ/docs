@@ -18,6 +18,19 @@
         ]
     },
     {
+        "text": "Inbox",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/inbox/introduction"
+          },
+          {
+            "text": "API",
+            "link": "/inbox/api"
+          }
+        ]
+    },
+    {
         "text": "Layout",
         "children": [
           {
