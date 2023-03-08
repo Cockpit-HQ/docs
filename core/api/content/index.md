@@ -176,7 +176,9 @@ fetch('https://cockpit.tld/api/content/item/2fd457c3376537fb3d0001e2', {
   required: true
   type: string
 
+
 ---
+
 
 ### `GET /content/items/{model}`
 
@@ -237,7 +239,51 @@ fetch('https://cockpit.tld/api/content/items/faq', {
   Populate items with linked content items.
   type: int
 
+---
 
+
+### `GET /content/tree/{model}`
+
+Use this API endpoint whenever you want to fetch nested tree model items.
+
+Example: For a content model *categories* data can be fetched using the following request.
+
+```bash
+curl -X GET "https://cockpit.tld/api/content/tree/categories" \
+ -H "api-key: a2ea86ea065a6d2301a8b4a535bc"
+```
+
+
+```javascript
+fetch('https://cockpit.tld/api/content/tree/categories', {
+  method: 'GET',
+  headers: {
+    "api-key": "a2ea86ea065a6d2301a8b4a535bc"
+  }
+})
+.then(response => response.json())
+.then(response => console.log(response));
+```
+
+#### Parameters
+
+-
+  **model**
+  Model name
+  required: true
+  type: string
+-
+  **locale**
+  Return content for specified locale
+  type: String
+-
+  **fields**
+  Url encoded fields projection as json
+  type: json
+-
+  **populate**
+  Populate items with linked content items.
+  type: int
 
 
 ## Filtering
