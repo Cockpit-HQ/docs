@@ -1,10 +1,14 @@
 [
     {
-        "text": "Introduction",
+        "text": "General",
         "children": [
           {
             "text": "About",
-            "link": "/introduction/about"
+            "link": "/general/about"
+          },
+          {
+            "text": "Theming",
+            "link": "/general/theming"
           }
         ]
     },

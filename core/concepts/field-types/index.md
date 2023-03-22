@@ -360,7 +360,7 @@ ${data['some-field-name']}
 If you want to display the value of a linked content item, you just pass the field to the dedicated `$content` helper function followed by the value path you want to get displeyed:
 
 ```
-${ $content(data.post, 'data.title') }
+${ $content(data.post, '${data.title}') }
 ```
 
 ### Text
