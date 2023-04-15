@@ -1,7 +1,6 @@
 # Sync
 
-Push or pull resources between different Cockpit instances.
-
+The Sync add-on is an extension focused on enabling seamless synchronization of assets, models, content, pages, and more between multiple Cockpit instances. As projects grow and evolve, the need for efficient collaboration and data consistency across environments becomes essential. This add-on addresses this requirement by offering developers and content authors an easy-to-use solution for synchronizing data between different Cockpit installations.
 
 ## Sync key
 

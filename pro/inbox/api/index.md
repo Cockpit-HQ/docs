@@ -1,9 +1,8 @@
 # API
 
-Submit data to form
+Submit data to a form
 
 ### `POST /inbox/submit/{form-token}`
-
 
 ** Via HTML form: **
 

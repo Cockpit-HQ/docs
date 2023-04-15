@@ -1,6 +1,6 @@
 # Inbox
 
-Accept submissions from custom forms - including file uploads.
+The Inbox add-on is an extension focused on easily streamlining the process of collecting and managing form submissions from your website or application - including file uploads. Capture form data and store it securely within Cockpit.
 
 ## Quick Setup
 

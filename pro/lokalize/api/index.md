@@ -3,7 +3,7 @@
 
 Get translation strings by project
 
-Endpoint: `GET /lokalize/project/{name}`
+### `GET /lokalize/project/{name}`
 
 
 ```bash

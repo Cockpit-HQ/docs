@@ -4,7 +4,7 @@
 
 Use the *Menus*-API endpoint whenever you want to fetch the full list of all of your menus.
 
-Endpoint: `GET /pages/menus`
+### `GET /pages/menus`
 
 
 ```bash
@@ -28,7 +28,7 @@ fetch('https://cockpit.tld/api/pages/menus', {
 
 Whenever you want to fetch one menu from Cockpit the *Menu*-API endpoint can be used.
 
-Endpoint: `GET /pages/menu/{name}`
+### `GET /pages/menu/{name}`
 
 Example: For a menu *main* the menu data can be fetched using the following request.
 
@@ -54,7 +54,7 @@ fetch('https://cockpit.tld/api/pages/menu/main', {
 
 Use the *Pages*-API endpoint whenever you want to fetch the full list of all of your pages.
 
-Endpoint: `GET /pages/pages`
+### `GET /pages/pages`
 
 
 ```bash
@@ -103,7 +103,7 @@ fetch('https://cockpit.tld/api/pages/pages', {
 
 Whenever you want to fetch a single page item by page *slug* the *Page*-API can be used.
 
-Endpoint: `GET /pages/page`
+### `GET /pages/page`
 
 Example: For a page with slug *home* the data can be fetched using the following request. Make sure to prefix your page's slug when passing as parameter, i.e. `route=/home` for the slug *home*
 
@@ -130,7 +130,7 @@ fetch('https://cockpit.tld/api/pages/page?route=/home', {
 
 Whenever you want to fetch a single page item by id the *Page*-API can be used.
 
-Endpoint: `GET /pages/page/{id}`
+### `GET /pages/page/{id}`
 
 Example: For a page with id *3bfc72d9343631c575000111* the data can be fetched using the following request.
 
@@ -156,7 +156,7 @@ fetch('https://cockpit.tld/api/pages/page/3bfc72d9343631c575000111', {
 
 By using the *Routes*-API endpoint you can fetch the list of all routes for pages. In contrast to the Pages-API endpoint it does not return page content, but just a lightweight response of routes, slugs and page types. If the `locale` parameter is not provided all routes are grouped by locale and all locales are returned.
 
-Endpoint: `GET /pages/routes`
+### `GET /pages/routes`
 
 
 ```bash
@@ -180,7 +180,7 @@ fetch('https://cockpit.tld/api/pages/routes', {
 
 By using the *Settings*-API endpoint you can fetch the settings for pages. This contains SEO metadata as well as images, scripts and more.
 
-Endpoint: `GET /pages/settings`
+### `GET /pages/settings`
 
 
 ```bash
@@ -204,7 +204,7 @@ fetch('https://cockpit.tld/api/pages/settings', {
 
 The *Sitemap*-API endpoint returns the complete sitemap of pages.
 
-Endpoint: `GET /pages/sitemap`
+### `GET /pages/sitemap`
 
 
 ```bash

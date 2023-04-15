@@ -18,6 +18,19 @@
         ]
     },
     {
+        "text": "Detektivo",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/detektivo/introduction"
+          },
+          {
+            "text": "API",
+            "link": "/detektivo/api"
+          }
+        ]
+    },
+    {
         "text": "Inbox",
         "children": [
           {

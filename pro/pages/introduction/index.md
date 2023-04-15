@@ -2,8 +2,10 @@
 
 [[toc]]
 
+The Pages add-on is an extension takes a page-centric approach to content creation and editing,  simplifying the process of managing a classic site tree, SEO, and menus for your web application or website. As organizing and optimizing content is vital for creating a successful online presence, this powerful add-on offers developers an all-in-one solution for handling site structure and navigation with ease.
 
-Pages is a Cockpit addon, which takes a page-centric approach to content creation and editing.
+With the Pages add-on, developers can effortlessly create, organize, and manage pages within a hierarchical site tree, while also supporting multiple page types. This add-on streamlines the process of designing and maintaining website navigation, enabling you to create custom menus and adapt them to your project's unique requirements.
+
 
 ## Managing pages
 
