@@ -11,3 +11,11 @@ With the purchase of a Cockpit Pro license you support the development and maint
 Unlock the full potential of your projects with our exclusive suite of premium add-ons and dedicated support.
 
 [Start your Cockpit Pro journey](https://getcockpit.com/start-journey)
+
+
+## Installing license file
+
+1. After your purchase or request is processed, you will receive via email a link to download a license file.
+2. Download & save the license file to your local machine
+3. Put the license file on the root level of your Cockpit instance
+4. Done!
