@@ -41,9 +41,9 @@ return [
     # use smtp to send emails
     'mailer' => [
         'from'       => 'info@mydomain.tld',
-        'transport'  => 'smtp'
+        'transport'  => 'smtp',
         'host'       => 'smtp.myhost.tld',
-        'user'       => 'username'
+        'user'       => 'username',
         'password'   => 'xxpasswordxx',
         'port'       => 25,
         'auth'       => true,
