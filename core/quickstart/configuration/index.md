@@ -1,7 +1,10 @@
 # Configuration
 
-By default, Cockpit doesn't need any further configuration to run. However, you might want to use MongoDB instead of SQLite as your favorite data storage. Therefore Cockpit provides an easy way to tweak some settings.
+By default, Cockpit doesn't need any further configuration to run. However, the default configuration settings are insecure that allow file upload of any type and use a default custom security key. Additionally, you might want to use MongoDB instead of SQLite as your favorite data storage.
 
+Cockpit provides an easy way to tweak some settings. Below is an example configuration file.
+
+It is important to note that developers and users of Cockpit CMS are responsible for hardening their Cockpit CMS server.
 
 ## Config options
 
@@ -19,6 +22,7 @@ return [
     'session.name' => 'mysession',
 
     # app custom security key
+    # CHANGE THIS IN YOUR CONFIGURATION SETTING
     'sec-key' => 'xxxxx-SiteSecKeyPleaseChangeMe-xxxxx',
 
     # site url (optional) - helpful if you're behind a reverse proxy
@@ -49,6 +53,18 @@ return [
         'auth'       => true,
         'encryption' => '' # '', 'ssl' or 'tls'
     ]
+
+    ##
+    # Only allow files with the 'png, jpg, jpeg' extension to be uploaded
+    ##
+    
+    # Only allow 'png, jpg, jpeg' using the Assets API
+    'assets' => [
+        'allowed_uploads' => 'png, jpg, jpeg'
+    ],
+
+    # Only allow 'png, jpg, jpeg' using the Finder API
+    'finder.allowed_uploads' => 'png, jpg, jpeg',
 
     # Define Access-Control (CORS) settings.
     # Those are the default values. You don't need to duplicate them all.
