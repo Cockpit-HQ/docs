@@ -13,7 +13,7 @@ Done!
 
 ## Changing the color scheme
 
-To customize the color scheme of your Cockpit admin interface, you'll need to create the following file: `/config/style.css`.
+To customize the color scheme of your Cockpit admin interface, you'll need to create the following file: `/config/theme.css`.
 
 An example to change the primary color:
 
