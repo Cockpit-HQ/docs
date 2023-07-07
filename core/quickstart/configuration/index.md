@@ -69,12 +69,12 @@ return [
     # Define Access-Control (CORS) settings.
     # Those are the default values. You don't need to duplicate them all.
     'cors' => [
-      'allowedHeaders' => 'X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding, Cockpit-Token',
-      'allowedMethods' => 'PUT, POST, GET, OPTIONS, DELETE',
-      'allowedOrigins' => '*',
-      'maxAge' => '1000',
-      'allowCredentials' => 'true',
-      'exposedHeaders' => 'true',
+        'Access-Control-Allow-Origin' => '*',
+        'Access-Control-Allow-Credentials' => 'true',
+        'Access-Control-Max-Age' => '1000',
+        'Access-Control-Allow-Headers' => 'X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding, API-KEY',
+        'Access-Control-Allow-Methods' => 'PUT, POST, GET, OPTIONS, DELETE',
+        'Access-Control-Expose-Headers' => 'true',
     ],
 ];
 ```
