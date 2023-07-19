@@ -7,7 +7,7 @@ Spaces allows multi-tenancy within Cockpit. A Cockpit space is an isolated sub-i
 
 
 1. Login to your Cockpit installation
-2. Navigate to *Settingsm > Spaces*
+2. Navigate to *Settings > Spaces*
 3. Click *Create space*
 
 ![Screenshot of spaces overview](./spaces.png)
