@@ -52,7 +52,7 @@ return [
         'port'       => 25,
         'auth'       => true,
         'encryption' => '' # '', 'ssl' or 'tls'
-    ]
+    ],
 
     ##
     # Only allow files with the 'png, jpg, jpeg' extension to be uploaded
