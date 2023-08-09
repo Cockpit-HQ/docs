@@ -319,3 +319,14 @@ Example: Return only the questions of faq items.
 curl -X GET "https://cockpit.tld/api/content/items/faq?fields={question:1}" \
  -H "api-key: a2ea86ea065a6d2301a8b4a535bc"
 ```
+
+## Pagination
+
+Pagination allows the retrieval of a subset of entries. It's helpful when dealing with large content collections, as it reduces server load and streamlines the user experience. The parameters `limit` and `skip` are used for pagination.
+
+Example: Get a maximum of 10 posts and skip the first 20
+
+```bash
+curl -X GET "https://cockpit.tld/api/content/items/posts?limit=10&skip=20" \
+ -H "api-key: a2ea86ea065a6d2301a8b4a535bc"
+```
