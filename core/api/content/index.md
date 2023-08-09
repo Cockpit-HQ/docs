@@ -305,3 +305,17 @@ fetch('https://cockpit.tld/api/content/items/faq?filter={fieldA:"test"}', {
 .then(response => response.json())
 .then(response => console.log(response));
 ```
+
+## Project Fields to Return from Query
+
+The `fields` parameter is used in API calls to limit the fields returned from the content api. This is useful to narrow down the response to only include necessary information.
+
+Read more about the projection capabilities in the [Mongo Fields Projection](https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/) documentation.
+
+
+Example: Return only the questions of faq items.
+
+```bash
+curl -X GET "https://cockpit.tld/api/content/items/faq?fields={question:1}" \
+ -H "api-key: a2ea86ea065a6d2301a8b4a535bc"
+```
