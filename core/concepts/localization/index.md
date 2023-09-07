@@ -44,11 +44,11 @@ After you enabled *localize field* as described in [Enable localized content for
 
 Before you start check if your desired translation / language is already available in the [i18n repository](https://github.com/Cockpit-HQ/i18n).
 
-If the translation is already available:
+If the translation is **already available**:<br />
 Copy the translation to the `/config/i18n/` folder.
 
-If the translation is not yet available:
-Create new empty localization files by running `php ./tower app:i18n:create` from the root directory of Cockpit. After that translate all strings in the files manually.
+If the translation is **not yet available**:<br />
+Create new empty localization files by running `php ./tower app:i18n:create` from the root directory of Cockpit. After that manually translate all strings in the files.
 
 
 Lastly sign-in to the administration panel and choose the desired language for your user(s) in the account settings under "Admin UI language".
