@@ -20,6 +20,7 @@ Currently only Amazon S3 and services having a S3 compatible api are supported.
 return [
     'cloudStorage' => [
         'uploads' => [
+            'url' => getenv('S3_URL'), // Set this value if you use a S3 compatible service / api
             'key' => getenv('S3_KEY'),
             'secret' => getenv('S3_SECRET'),
             'region' => 'eu-central-1',
