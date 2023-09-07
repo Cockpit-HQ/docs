@@ -40,3 +40,17 @@ After you enabled *localize field* as described in [Enable localized content for
 
 ![Screenshot of item with localized fields displayed](./edit-item-with-locales-displayed.png)
 
+## How to localize the administration panel
+
+Before you start check if your desired translation / language is already available in the [i18n repository](https://github.com/Cockpit-HQ/i18n).
+
+If the translation is **already available**:<br />
+Copy the translation to the `/config/i18n/` folder.
+
+If the translation is **not yet available**:<br />
+Create new empty localization files by running `php ./tower app:i18n:create` from the root directory of Cockpit. After that manually translate all strings in the files.
+
+
+Lastly sign-in to the administration panel and choose the desired language for your user(s) in the account settings under "Admin UI language".
+
+![Screenshot of account settings](./localize-admin-ui.png)

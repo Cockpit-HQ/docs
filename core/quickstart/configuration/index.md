@@ -76,5 +76,9 @@ return [
         'Access-Control-Allow-Methods' => 'PUT, POST, GET, OPTIONS, DELETE',
         'Access-Control-Expose-Headers' => 'true',
     ],
+
+    # Default administration panel language for new users
+    # This requires existing translations as described in the documentation
+    'i18n' => 'en' 
 ];
 ```
