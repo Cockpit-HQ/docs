@@ -1,6 +1,6 @@
-# The Basics
+# Fields
 
-Cockpit provides a set of default features for managing content.
+Cockpit provides a set of fields for structuring and managing your content.
 
 [[toc]]
 
