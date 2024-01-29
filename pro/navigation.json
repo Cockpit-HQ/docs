@@ -9,6 +9,15 @@
         ]
     },
     {
+        "text": "Autopilot",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/autopilot/introduction"
+          }
+        ]
+    },
+    {
         "text": "CloudStorage",
         "children": [
           {
