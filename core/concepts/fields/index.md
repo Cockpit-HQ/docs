@@ -16,7 +16,7 @@ We use example field names and configuration to provide you with concrete exampl
 
 ### Asset
 
-The *Asset* field displays a button to link any asset from your list of [Assets](/features/assets/) within the content model form.
+The *Asset* field displays a button to link any asset from your list of [Assets](/concepts/assets/) within the content model form.
 
 Use an *Asset* field whenever you intend to reference assets from your content models.
 
@@ -70,7 +70,7 @@ Example result:
 
 The *Collection page item* field is a feature rich complex field type. When using this field type you can specify the collection to use. Later, when providing content for the field, you can choose the desired page from your list of Pages of type *Collection*.
 
-Use a *Collection page item* field, whenever you want to display a configurable number of [Collection](/features/content/) items, that have been selected to be displayed in one of your [Pages](/addons/pages).
+Use a *Collection page item* field, whenever you want to display a configurable number of [Collection](/concepts/content/) items, that have been selected to be displayed in one of your [Pages](/addons/pages).
 
 Example result:
 
@@ -96,9 +96,9 @@ Example result:
 
 ### Content link
 
-The *Content link* field displays an element to link content from your [Collections](/features/content/). When using this field type you can specify the collection to use. Later, when providing content for the field, you can choose one item from the collection specified.
+The *Content link* field displays an element to link content from your [Collections](/concepts/content/). When using this field type you can specify the collection to use. Later, when providing content for the field, you can choose one item from the collection specified.
 
-Use a *Content link* field, whenever you want to link content from one of your [Collection](/features/content/) items.
+Use a *Content link* field, whenever you want to link content from one of your [Collection](/concepts/content/) items.
 
 Example result:
 
