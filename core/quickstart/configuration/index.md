@@ -57,7 +57,7 @@ return [
     ##
     # Only allow files with the 'png, jpg, jpeg' extension to be uploaded
     ##
-    
+
     # Only allow 'png, jpg, jpeg' using the Assets API
     'assets' => [
         'allowed_uploads' => 'png, jpg, jpeg'
@@ -79,6 +79,20 @@ return [
 
     # Default administration panel language for new users
     # This requires existing translations as described in the documentation
-    'i18n' => 'en' 
+    'i18n' => 'en',
+
+    # Allowed origins to access the api
+    'api.security.origins' => ['domain1.tld', 'domain2.tld']
+    
+    # The limit for API requests in a given time frame. `0` means no limit (default).
+    'api.security.ratelimit' => 0,
+    # Time (in seconds) for rate limit window.
+    'api.security.ratelimit.time' => 60,
+    
+    # store model schema in database instead of filesystem (default)
+    'content' => [
+        'models' => ['storage' => 'database']
+    ],
+    
 ];
 ```
