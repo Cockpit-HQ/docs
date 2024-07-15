@@ -286,6 +286,50 @@ fetch('https://cockpit.tld/api/content/tree/categories', {
   type: int
 
 
+---
+
+
+### `GET /content/items`
+
+Batch request content from multiple content models.
+
+Example:
+
+```bash
+curl -X GET "https://cockpit.tld/api/content/items?models={faq:{}, articles:{sort:{_created:-1}}}" \
+ -H "api-key: a2ea86ea065a6d2301a8b4a535bc"
+```
+
+
+```javascript
+fetch('https://cockpit.tld/api/content/items?models={faq:{}, articles:{sort:{_created:-1}}}', {
+  method: 'GET',
+  headers: {
+    "api-key": "a2ea86ea065a6d2301a8b4a535bc"
+  }
+})
+.then(response => response.json())
+.then(response => console.log(response));
+```
+
+#### Parameters
+
+-
+  **models**
+  Models query config
+  required: true
+  type: string
+-
+  **locale**
+  Return content for specified locale
+  type: String
+-
+  **populate**
+  Populate items with linked content items.
+  type: int
+
+---
+
 ## Filtering
 
 To filter content items you have to use [Mongo Query](https://www.mongodb.com/docs/manual/reference/operator/query/) syntax.
