@@ -32,7 +32,7 @@ fetch('https://cockpit.tld/api/content/item/imprint', {
 -
   **locale**
   Return content for specified locale
-  type: String
+  type: string
 -
   **filter**
   Url encoded filter json
@@ -129,7 +129,7 @@ fetch('https://cockpit.tld/api/content/item/2fd457c3376537fb3d0001e2', {
 -
   **locale**
   Return content for specified locale
-  type: String
+  type: string
 -
   **fields**
   Url encoded fields projection as json
@@ -213,7 +213,7 @@ fetch('https://cockpit.tld/api/content/items/faq', {
 -
   **locale**
   Return content for specified locale
-  type: String
+  type: string
 -
   **filter**
   Url encoded filter json
@@ -275,7 +275,7 @@ fetch('https://cockpit.tld/api/content/tree/categories', {
 -
   **locale**
   Return content for specified locale
-  type: String
+  type: string
 -
   **fields**
   Url encoded fields projection as json
@@ -322,7 +322,7 @@ fetch('https://cockpit.tld/api/content/items?models={faq:{}, articles:{sort:{_cr
 -
   **locale**
   Return content for specified locale
-  type: String
+  type: string
 -
   **populate**
   Populate items with linked content items.
