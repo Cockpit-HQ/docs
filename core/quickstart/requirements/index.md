@@ -7,6 +7,10 @@ Cockpit doesn't require anything special to run out of the box. Most of the the 
 
 Only if you plan to use Redis and MongoDB for data storage, you might need to do some extra steps to install additional extensions.
 
+::: MongoDB
+If you plan to use MongoDB for data storage, make sure that you run MongoDB with _server side javascript_ enabled.
+:::
+
 ## General
 
 * PHP >= 8.1
