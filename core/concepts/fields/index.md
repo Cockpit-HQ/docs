@@ -389,8 +389,6 @@ Example result:
 
 ### Wysiwyg
 
-The *Wysiwyg* field displays a textarea with a [TinyMCE](https://www.tiny.cloud/docs/tinymce/6/) wysiwyg editor.
-
 Use a *Wysiwyg* field whenever you want to allow HTML formatted content within your content model data.
 
 Example result:
@@ -398,7 +396,3 @@ Example result:
 ```json:no-line-numbers
 "wysiwyg-example": "<p>Hello <strong>World</strong>!</p>"
 ```
-
-[Initial configuration of the TinyMCE editor](https://www.tiny.cloud/docs/tinymce/6/editor-important-options/) can be modified through the `options` tab in the Field Settings.
-
-![Screenshot of field settings showing options configured for TinyMCE editor](./wysiwyg-options-config-example.png)
