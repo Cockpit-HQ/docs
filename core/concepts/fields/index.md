@@ -2,6 +2,8 @@
 
 Cockpit provides a set of fields for structuring and managing your content.
 
+It is generally not recommended to use *kebab-case* for field names, but instead *camel-case* (***fieldName***).
+
 [[toc]]
 
 ## Field types
@@ -244,7 +246,7 @@ Use a *Number* field whenever you want to provide a numeric value your content m
 Example result:
 
 ```json:no-line-numbers
-"color-example": "#ff0000"
+"number-example": 42
 ```
 
 ### Object
