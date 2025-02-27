@@ -10,7 +10,7 @@ Go to **Settings > Webhooks** to manage your sync jobs.
 
 ## Events
 
-Some possible event names that can be used to trigger a wbhook:
+Some possible event names that can be used to trigger a webhook:
 
 - `content.item.save`
 - `content.item.save.{modelName}`
