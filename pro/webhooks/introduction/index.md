@@ -13,6 +13,6 @@ Go to **Settings > Webhooks** to manage your sync jobs.
 Some possible event names that can be used to trigger a wbhook:
 
 - `content.item.save`
-- `pages.page.save`
+- `content.item.save.{modelName}`
 - `pages.page.save`
 - `lokalize.project.save`

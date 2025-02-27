@@ -25,7 +25,7 @@ Use an *Asset* field whenever you intend to reference assets from your content m
 Example result:
 
 ```json:no-line-numbers
-"asset-example": {
+"assetField": {
     "path": "/path/to/the/asset/filename.pdf",
     "title": "filename.pdf",
     "mime": "application/pdf",
@@ -53,7 +53,7 @@ Use a *Boolean* field whenever you want to have a simple boolean value in your c
 Example result:
 
 ```json:no-line-numbers
-"boolean-example": false
+"booleanField": false
 ```
 
 ### Code
@@ -65,7 +65,7 @@ Use a *Code* field whenever you intend to display code samples.
 Example result:
 
 ```json:no-line-numbers
-"code-example": "<?php\n\n// This is my first hello world example\necho \"Hello world\";\n\n?>"
+"codeField": "<?php\n\n// This is my first hello world example\necho \"Hello world\";\n\n?>"
 ```
 
 ### Collection page item
@@ -77,7 +77,7 @@ Use a *Collection page item* field, whenever you want to display a configurable 
 Example result:
 
 ```json:no-line-numbers
-"collection-page-items-example": {
+"collectionPageItemsField": {
     "items": [], // the list of collection items if any
     "pageCollectionId": "6816061a6665321201000124",
     "limit": 4
@@ -93,7 +93,7 @@ Use a *Color* field whenever you want to use a color value in your content model
 Example result:
 
 ```json:no-line-numbers
-"color-example": "#ff0000"
+"colorField": "#ff0000"
 ```
 
 ### Content link
@@ -105,7 +105,7 @@ Use a *Content link* field, whenever you want to link content from one of your [
 Example result:
 
 ```json:no-line-numbers
-"content-link-example": {
+"content-linkField": {
     "_model": "faq", // faq is an example here, this will be your collection's name
     "_id": "ae7459d63939362ba5000384" // the id of the selected item
 }
@@ -125,7 +125,7 @@ Use a *Date* field whenever you want to use a date value in your content model d
 Example result:
 
 ```json:no-line-numbers
-"date-example": "2021-12-22" // your date in format YYYY-MM-DD
+"dateField": "2021-12-22" // your date in format YYYY-MM-DD
 ```
 
 ### Date time
@@ -137,7 +137,7 @@ Use a *Date time* field whenever you want to use a datetime value in your conten
 Example result:
 
 ```json:no-line-numbers
-"date-time-example": "2021-12-24 12:00" // your date in format YYYY-MM-DD HH:ii
+"date-timeField": "2021-12-24 12:00" // your date in format YYYY-MM-DD HH:ii
 ```
 
 ### Layout
@@ -165,7 +165,7 @@ Further information on layout components and configuration options can bee found
 Example result:
 
 ```json:no-line-numbers
-"layout-example": [
+"layoutField": [
     {
         "component": "section",
         "label": "my-first-example-section",
@@ -208,7 +208,7 @@ Use a *Navigation* field whenever you want to provide a menu for websites or app
 Example result:
 
 ```json:no-line-numbers
-"navigation-example":  [
+"navigationField":  [
     {
         "title": "Example menu entry one",
         "url": "https://example.com/one",
@@ -246,7 +246,7 @@ Use a *Number* field whenever you want to provide a numeric value your content m
 Example result:
 
 ```json:no-line-numbers
-"number-example": 42
+"numberField": 42
 ```
 
 ### Object
@@ -258,7 +258,7 @@ Use a *Object* field whenever you intend to store some kind of meta-data, settin
 Example result:
 
 ```json:no-line-numbers
-"object-example": {
+"objectField": {
     "key": "value"
 }
 ```
@@ -272,7 +272,7 @@ Use a *Page link / url* field whenever you intend to reference a page from your 
 Example result:
 
 ```json:no-line-numbers
-"page-link-url-example": "pages://6816061a6665321201000124"
+"pageLinkField": "pages://6816061a6665321201000124"
 ```
 
 ### Select
@@ -284,7 +284,7 @@ Use a *Select* field whenever you want to choose an option from a predefined lis
 Example result:
 
 ```json:no-line-numbers
-"select-example": "Example option B" // contains the value of your option selected
+"selectField": "Example option B" // contains the value of your option selected
 ```
 
 ### SEO
@@ -301,7 +301,7 @@ Use a *SEO* field whenever you want to provide content SEO information.
 Example result:
 
 ```json:no-line-numbers
-"seo-example": {
+"seoField": {
     "title": "seo example title value",
     "keywords": "seo example keywords value",
     "decription": "seo example description value",
@@ -340,9 +340,9 @@ Use a *Set of fields* field whenever you want to group a set of fields.
 Example result:
 
 ```json:no-line-numbers
-"set-example": {
-    "field-one-in-set-of-fields": "Value of field one in set of fields",
-    "field-two-in-set-of-fields": "Value of field two in set of fields"
+"setField": {
+    "fieldA": "Value of field one in set of fields",
+    "fieldB": "Value of field two in set of fields"
 }
 ```
 
@@ -374,7 +374,7 @@ Use a *Text* field whenever you want to provide a simple text input for any shor
 Example result:
 
 ```json:no-line-numbers
-"text-example": "Text field value"
+"textField": "Text field value"
 ```
 
 ### Time
@@ -386,7 +386,7 @@ Use a *Time* field whenever you want to use a time value in your content model d
 Example result:
 
 ```json:no-line-numbers
-"time-example": "11:38" // the time in format HH:ii
+"timeField": "11:38" // the time in format HH:ii
 ```
 
 ### Wysiwyg
@@ -396,5 +396,5 @@ Use a *Wysiwyg* field whenever you want to allow HTML formatted content within y
 Example result:
 
 ```json:no-line-numbers
-"wysiwyg-example": "<p>Hello <strong>World</strong>!</p>"
+"wysiwygField": "<p>Hello <strong>World</strong>!</p>"
 ```
