@@ -76,6 +76,11 @@
           "text": "CLI",
           "link": "/concepts/cli",
           "children": []
+        },
+        {
+          "text": "Authentication",
+          "link": "/concepts/authentication",
+          "children": []
         }
       ]
     },

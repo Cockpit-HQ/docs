@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Development",
+    "children": [
+      {
+        "text": "Creating Custom Addons",
+        "link": "/creating-custom-modules",
+        "children": []
+      },
+      {
+        "text": "Creating Custom Fields",
+        "link": "/creating-custom-fields",
+        "children": []
+      },
+      {
+        "text": "Using Cockpit as Library",
+        "link": "/using-cockpit-as-library",
+        "children": []
+      },
+      {
+        "text": "File-Based API Endpoints",
+        "link": "/creating-file-based-api-endpoints",
+        "children": []
+      }
+    ]
+  }
+]
