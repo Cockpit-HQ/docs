@@ -13,9 +13,10 @@ If you plan to use MongoDB for data storage, make sure that you run MongoDB with
 
 ## General
 
-* PHP >= 8.1
+* PHP >= 8.3
 * PDO with SQLite support or [mongodb extension](https://pecl.php.net/package/mongodb) to use MongoDB as data storage
-* Apache (with mod_rewrite enabled) or nginx
+* 256MB+ memory allocated to PHP (minimum)
+* Any modern webserver
 * Any modern browser
 
 

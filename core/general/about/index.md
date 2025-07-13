@@ -4,13 +4,12 @@
 
 Cockpit is a self-hosted, flexible and user-friendly headless content platform for creating custom digital experiences.
 
-Initially developed by [Agentejo](https://github.com/agentejo) back in 2011 as a need for highly customized digital projects and evolving since then.
+Initially developed by [Agentejo](https://agentejo.com) back in 2011 as a need for highly customized digital projects and evolving since then.
 
 ## Why Cockpit?
 
 Good question - let it be answered by a few key facts:
 
-* The first version of Cockpit was released back in October 2013 - [Agentejo](https://github.com/agentejo) as well as the Cockpit Community made major improvements since then.
 * Cockpit Core is 100% open source - you can contribute, copy code or modify Cockpit to suit your own needs at any time.
 * Cockpit is built as a stand-alone solution without major dependencies.
 * Highly customizable and extensible code base

@@ -12,7 +12,7 @@ The following steps describe the setup of a fresh new installation of Cockpit.
 4. Navigate to your Cockpit installation folder at **/install/**
 5. Ensure write permissions for the **/storage** directory.
 6. Open the administration panel
-7. Login with username **admin** and password **admin**
+7. Login with username **admin** and generated password
 8. Congratulations! You managed to install Cockpit successfully.
 
 ::: Note
