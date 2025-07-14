@@ -40,6 +40,48 @@ Create custom REST API endpoints using Cockpit's file-based routing. This guide 
 - Authentication and authorization
 - Building RESTful APIs
 
+## Integration Guides
+
+### [Cockpit with Next.js](/documentation/guides/cockpit-with-nextjs)
+
+Build modern React applications using Cockpit as a headless CMS backend. This comprehensive guide covers:
+- Setting up Cockpit API client for Next.js
+- Implementing static generation and server-side rendering
+- Dynamic routing and content fetching
+- Image optimization and performance
+- Webhook integration for content updates
+- TypeScript support and best practices
+
+### [Cockpit with Nuxt.js](/documentation/guides/cockpit-with-nuxtjs)
+
+Create performant Vue.js applications with Cockpit CMS and Nuxt.js. This guide includes:
+- Building a Nuxt.js API client with composables
+- Server-side rendering (SSR) and static generation
+- Dynamic pages with Nuxt Content patterns
+- Performance optimization with caching
+- Real-time content updates via webhooks
+- Vue.js reactivity and TypeScript integration
+
+### [Cockpit with Laravel](/documentation/guides/cockpit-with-laravel)
+
+Integrate Cockpit CMS seamlessly with Laravel applications. This comprehensive guide covers:
+- Creating a Laravel service provider and facade for Cockpit
+- Direct MongoDB-style queries with filter arrays
+- Implementing Blade components for content rendering
+- Content model abstraction with Eloquent-like syntax
+- Caching strategies and performance optimization
+- Creating custom Artisan commands for content management
+
+### [Cockpit with Remix](/documentation/guides/cockpit-with-remix)
+
+Build full-stack React applications with Remix and Cockpit CMS. This guide includes:
+- Setting up server-side Cockpit API client
+- Data fetching with loaders and actions
+- Optimistic UI updates and streaming
+- Form handling with progressive enhancement
+- Image optimization and CDN integration
+- Error boundaries and type-safe development
+
 ## Getting Started
 
 Choose a guide based on what you want to accomplish:
@@ -48,6 +90,10 @@ Choose a guide based on what you want to accomplish:
 - **Need specialized input fields?** Check out [Creating Custom Fields](/documentation/guides/creating-custom-fields)
 - **Building a custom application?** Read [Using Cockpit as Library](/documentation/guides/using-cockpit-as-library)
 - **Creating APIs?** Explore [File-Based API Endpoints](/documentation/guides/creating-file-based-api-endpoints)
+- **Building with Next.js?** Follow [Cockpit with Next.js](/documentation/guides/cockpit-with-nextjs)
+- **Building with Nuxt.js?** Check out [Cockpit with Nuxt.js](/documentation/guides/cockpit-with-nuxtjs)
+- **Building with Laravel?** Read [Cockpit with Laravel](/documentation/guides/cockpit-with-laravel)
+- **Building with Remix?** Explore [Cockpit with Remix](/documentation/guides/cockpit-with-remix)
 
 ## Prerequisites
 

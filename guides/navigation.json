@@ -23,5 +23,30 @@
         "children": []
       }
     ]
+  },
+  {
+    "text": "Integration",
+    "children": [
+      {
+        "text": "Cockpit with Next.js",
+        "link": "/cockpit-with-nextjs",
+        "children": []
+      },
+      {
+        "text": "Cockpit with Nuxt.js",
+        "link": "/cockpit-with-nuxtjs",
+        "children": []
+      },
+      {
+        "text": "Cockpit with Remix",
+        "link": "/cockpit-with-remix",
+        "children": []
+      },
+      {
+        "text": "Cockpit with Laravel",
+        "link": "/cockpit-with-laravel",
+        "children": []
+      }
+    ]
   }
 ]

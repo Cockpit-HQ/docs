@@ -21,29 +21,108 @@ To make the installation process as simple as possible, Cockpit creates a defaul
 
 ## Docker
 
-Pull the Cockpit CMS Docker image from Docker Hub (Core or Pro):
+Run Cockpit in containers for consistent, scalable deployments across any environment.
 
-**CORE:**
-```bash
-docker pull cockpithq/cockpit:core-latest
-``````
+### Quick Start
 
-**PRO:**
+Pull and run Cockpit with persistent storage:
+
 ```bash
-docker pull cockpithq/cockpit:pro-latest
+# Run with SQLite (recommended for development)
+docker run -d \
+  --name cockpit \
+  -p 8080:80 \
+  -v cockpit_storage:/var/www/html/storage \
+  cockpithq/cockpit:latest
+
+# Access at http://localhost:8080/install
 ```
 
-Run the Cockpit CMS container:
+### Available Docker Tags
 
-```bash
-docker run -d --name cockpit -p 8080:80 cockpithq/cockpit:pro-latest
+- `core-latest` - Latest stable core release
+- `core-{version}` - Specific core version (e.g., `core-3.0.0`)
+- `pro-latest` - Latest stable pro release
+- `pro-{version}` - Specific pro version
+
+Visit [Docker Hub](https://hub.docker.com/r/cockpithq/cockpit/tags) for all available tags.
+
+### Production Setup with MongoDB
+
+For production environments, we recommend using MongoDB for better performance and scalability:
+
+```yaml
+# docker-compose.yml
+version: '3.8'
+services:
+  cockpit:
+    image: cockpithq/cockpit:core-latest
+    ports:
+      - "80:80"
+    environment:
+      - COCKPIT_DATABASE_SERVER=mongodb://mongo:27017
+      - COCKPIT_DATABASE_NAME=cockpit
+    volumes:
+      - ./storage:/var/www/html/storage
+      - ./config:/var/www/html/config
+    depends_on:
+      - mongo
+      
+  mongo:
+    image: mongo:8
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=cockpit
+
+volumes:
+  mongo_data:
 ```
 
-This starts a Cockpit CMS container named cockpit, accessible on port 8080.
+### Configuration
 
-Access Cockpit CMS by navigating to http://localhost:8080/install in your web browser.
+Create a `config/config.php` file to configure your Cockpit instance:
 
-If you need to persist data or configure Cockpit further, you might consider mounting a volume for the `.spaces`, `storage` and `config` directory or customizing the Docker container to suit your needs.
+```php
+<?php
+// config/config.php
+return [
+    'database' => [
+        'server' => $_ENV['COCKPIT_DATABASE_SERVER'] ?? 'mongodb://mongo:27017',
+        'database' => $_ENV['COCKPIT_DATABASE_NAME'] ?? 'cockpit'
+    ],
+    'sec-key' => $_ENV['COCKPIT_SEC_KEY'] ?? 'your-random-security-key'
+];
+```
+
+### Mounting Configuration
+
+You can mount your configuration in two ways:
+
+**Option 1: Via Docker Compose volumes**
+```yaml
+volumes:
+  - ./config:/var/www/html/config
+  - ./storage:/var/www/html/storage
+```
+
+**Option 2: Create custom Docker image**
+```dockerfile
+FROM cockpithq/cockpit:core-latest
+COPY ./config/config.php /var/www/html/config/config.php
+```
+
+### Persistent Storage
+
+Always mount volumes for data persistence:
+
+- `/var/www/html/storage` - User uploads, cache, and database (SQLite)
+- `/var/www/html/config` - Configuration files
+- `/var/www/html/.spaces` - Multi-tenant spaces (if using)
+
+::: Note
+When using Docker, ensure the mounted directories have proper permissions. The container runs as `www-data` user.
+:::
 
 
 ---
