@@ -16,211 +16,99 @@ Editors author variants visually in the admin; frontend clients select the audie
 - **Variable replacement** - use placeholders like `{{ name }}` and replace them via request variables
 - **Non-destructive** - stored data remains unchanged; resolution only transforms the API output
 
-## Installation
+## Use Cases
 
-Copy the addon into `addons/Personi/` and ensure Cockpit loads addons (default behavior). No extra configuration required.
+Personi shines in scenarios where you need to show different content to different users:
 
-## Adding a Variants Field
-
-When defining a collection or singleton field, choose type `variants` and configure the inner fields that make up each variant's `data`:
-
-- Field type: `variants`
-- Option: `fields` → add any fields (e.g., `heading`, `image`, `cta`)
-
-Your stored value will look like:
-
+### A/B Testing
+Test different headlines, CTAs, or layouts to optimize conversion:
 ```json
 {
   "personi:variants": [
-    {
-      "id": "auto-generated",
-      "active": true,
-      "label": "Default",
-      "data": { "heading": "Welcome" },
-      "meta": null,
-      "audience": []
-    },
-    {
-      "id": "auto-generated",
-      "active": true,
-      "label": "Members",
-      "data": { "heading": "Welcome back" },
-      "meta": null,
-      "audience": ["member"]
-    }
+    { "label": "Control", "audience": ["test-a"], "data": { "headline": "Start your free trial" } },
+    { "label": "Variant B", "audience": ["test-b"], "data": { "headline": "Join 10,000+ happy customers" } }
+  ]
+}
+```
+Randomly assign users to `test-a` or `test-b` on the frontend and track which converts better.
+
+### Member vs Guest Content
+Show personalized content to logged-in users:
+```
+Guest: "Sign up to access exclusive content"
+Member: "Welcome back, here's what's new"
+Premium: "Your premium dashboard"
+```
+
+### Geo-Targeted Promotions
+Display region-specific pricing or offers:
+```json
+{
+  "personi:variants": [
+    { "audience": ["region-eu"], "data": { "price": "€49", "currency": "EUR" } },
+    { "audience": ["region-us"], "data": { "price": "$59", "currency": "USD" } },
+    { "audience": [], "data": { "price": "$59", "currency": "USD" } }
   ]
 }
 ```
 
-The `variants` field provides:
-
-- Add, remove, and reorder variants
-- Toggle active state and set an optional label
-- Audience tags editor
-- Embedded fields renderer to define the variant data
-- Optional meta object for additional notes or configuration
-
-## Layout Variants
-
-In Layout pages, add the component "Layout Variants". It contains a `layout` field of type `variants` so you can define audience-specific layouts. At API time, Personi unwraps the selected layout automatically.
-
-## Requesting Personalized Content
-
-Add the `personi` query parameter when calling Cockpit APIs:
-
+### Device-Specific Layouts
+Optimize layouts for mobile vs desktop:
 ```
-GET /api/content/items/blog?token=YOUR_TOKEN&personi=member
-GET /api/content/item/blog/ID?token=YOUR_TOKEN&personi=member,premium
-GET /api/pages/page/HOME_ID?token=YOUR_TOKEN&personi=mobile
+?personi=mobile   → Simplified single-column layout
+?personi=desktop  → Full multi-column layout with sidebar
 ```
 
-You can also use the HTTP header:
+## Installation
 
-```
-GET /api/content/items/blog?token=YOUR_TOKEN
-X-Personi-Audience: member,premium
-```
+Copy the addon into `addons/Personi/` and ensure Cockpit loads addons (default behavior). No extra configuration required.
 
-When `personi` is present, the response is processed and any `personi:variants` node is replaced with the best matching variant's `data`.
+## Quick Start
 
-:::info Note
-Resolution only happens when the `personi` query parameter or header is present. Without it, APIs return the raw variant structure.
-:::
+**1. Add a variants field to your content model:**
 
-## How Matching Works
+In your collection or singleton, add a field with type `variants` and configure the inner fields.
 
-1. Filters out inactive variants
-2. Computes similarity between the request audience (tags you pass) and each variant's `audience` using Jaccard similarity: `|intersection| / |union|`
-3. Picks the variant with the highest similarity
-4. If no variant has an audience or there's no better match, falls back to the first active variant
+**2. Create variants in the admin:**
 
-This resolution runs recursively across arrays, so nested structures are also handled.
+Add multiple variants with different audience tags (e.g., `guest`, `member`, `premium`).
 
-## Scheduling Variants
+**3. Fetch personalized content:**
 
-Use `meta.schedule` inside a variant to control when it is active.
+```bash
+# Without personalization - returns raw variant structure
+curl "https://your-site.com/api/content/item/homepage"
 
-### Supported Keys
-
-All keys are optional:
-
-| Key | Description |
-|-----|-------------|
-| `start` | DateTime string (ISO 8601 recommended) |
-| `end` | DateTime string (ISO 8601 recommended) |
-| `timezone` or `tz` | PHP timezone identifier (e.g., `Europe/Berlin`) |
-| `days` | Allowed days; numbers `0..6` where `0=Sun` or names `sun..sat`/`sunday..saturday` |
-| `times` | One or more time windows for the day |
-
-### Time Windows
-
-Time windows can be specified as:
-
-- String: `"HH:MM-HH:MM"` (supports overnight, e.g., `"22:00-02:00"`)
-- Object: `{ "from": "HH:MM", "to": "HH:MM" }`
-
-### Example: Weekday Business Hours
-
-```json
-{
-  "meta": {
-    "schedule": {
-      "start": "2025-11-01T00:00:00",
-      "end": "2025-11-30T23:59:59",
-      "timezone": "Europe/Berlin",
-      "days": ["mon", "tue", "wed", "thu", "fri"],
-      "times": ["09:00-17:30"]
-    }
-  }
-}
+# With personalization - returns resolved content for members
+curl "https://your-site.com/api/content/item/homepage?personi=member"
 ```
 
-### Shorthand
+**4. That's it!** The API response now contains the resolved variant data instead of the raw structure.
 
-You can also use a flattened format directly on meta:
+## Best Practices
 
-```json
-{
-  "meta": {
-    "start": "2025-11-01T00:00:00",
-    "end": "2025-11-30T23:59:59"
-  }
-}
-```
+### Audience Tag Naming
+- Use lowercase, hyphenated tags: `premium-member`, `region-eu`
+- Be consistent across your application
+- Document your tags for team reference
 
-## Client Timezone Offset
+### Default Variants
+- Always include a variant with empty `audience: []` as fallback
+- Place the default variant first in the list
 
-API clients can pass their timezone offset to have scheduling evaluated correctly for the user's local time.
+### Performance
+- Personalization adds minimal overhead (in-memory processing)
+- For heavy personalization, consider caching resolved content per audience combination
 
-**Query parameter:**
-```
-?tz_offset=120
-?tz_offset=+02:00
-```
-
-**Header:**
-```
-X-Personi-TZ-Offset: +02:00
-```
-
-The offset accepts either an integer (minutes) or a string in the form `±HH:MM`. When provided, Personi derives the client-local "now" by adding the offset to UTC and evaluates day/time windows against that local time.
-
-:::warning Caching
-If you use `tz_offset` in public APIs, consider disabling caching or adding cache vary rules for such requests.
-:::
-
-## Variable Replacement
-
-You can use placeholders in your content that will be replaced by values provided in the request.
-
-### Syntax
-
-- Basic: `{{ name }}`
-- Nested: `{{ user.location.city }}` (supports dot notation)
-- With default: `{{ name:Guest }}`
-
-### Passing Variables
-
-**Query parameter:**
-```
-?personi_vars[name]=Artur
-?personi_vars={"name":"Artur"}
-```
-
-**Header:**
-```
-X-Personi-Vars: {"name":"Artur"}
-```
-
-### Example
-
-If you have variant data `{"title": "Hello {{ name }}"}` and request with `?personi_vars[name]=Artur`, the response will be:
-
-```json
-{"title": "Hello Artur"}
-```
-
-## Programmatic Use
-
-You can resolve arrays programmatically in custom code using the helper:
-
-```php
-// $app is the Cockpit/Lime app instance
-$audience = ['member', 'premium'];
-$data = $app->helper('personi')->process($data, $audience);
-
-// With client time offset context
-$ctx = ['tzoffset' => 120]; // minutes relative to UTC
-$data = $app->helper('personi')->process($data, $audience, $ctx);
-
-// With variable replacement
-$ctx = ['variables' => ['name' => 'Artur']];
-$data = $app->helper('personi')->process($data, $audience, $ctx);
-```
+### Testing
+- Test each variant by passing different audience combinations
+- Use the raw API (without `personi`) to inspect all variants
+- Verify schedule-based variants by testing with different `tz_offset` values
 
 ## Notes and Limitations
 
 - Resolution only happens when the `personi` query parameter is present
-- Audience tags are matched as provided; normalize consistently on the client (e.g., lowercase)
+- Audience tags are matched as provided; normalize consistently on the client
 - If multiple variants tie with the same similarity, the first encountered wins
 - The addon hooks into `content.api.items`, `content.api.item`, and `pages.api.page` events
+- Variable replacement only works on string values, not keys or nested structures

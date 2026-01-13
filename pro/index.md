@@ -103,6 +103,21 @@ Transform Cockpit into a full-featured CMS with page management, routing, and SE
 
 ---
 
+### [Personi](/personi/introduction) - Content Personalization
+Deliver personalized content experiences based on audience segments, time, and custom criteria.
+
+**Key Features:**
+- Audience-based content variants
+- Field-level personalization
+- Time-based content scheduling
+- Layout component variants
+- API-driven personalization
+- A/B testing support
+
+**Perfect for:** Marketing teams, e-commerce sites, and applications requiring targeted content delivery.
+
+---
+
 ### [Sync](/sync/introduction) - Multi-Instance Synchronization
 Keep multiple Cockpit instances in sync across different environments.
 

@@ -72,7 +72,7 @@ Example result:
 
 The *Collection page item* field is a feature rich complex field type. When using this field type you can specify the collection to use. Later, when providing content for the field, you can choose the desired page from your list of Pages of type *Collection*.
 
-Use a *Collection page item* field, whenever you want to display a configurable number of [Collection](/concepts/content/) items, that have been selected to be displayed in one of your [Pages](/addons/pages).
+Use a *Collection page item* field, whenever you want to display a configurable number of [Collection](/concepts/content/) items, that have been selected to be displayed in one of your [Pages](/pages/introduction).
 
 Example result:
 

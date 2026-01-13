@@ -77,7 +77,7 @@ Creates a new application space in the `/.spaces` folder for multi-tenant setups
 **Arguments:**
 - `name` (required): Name of the new space
 
-**Learn more:** [Spaces documentation](/documentation/core/concepts/spaces)
+**Learn more:** [Spaces documentation](/concepts/spaces)
 
 ### Worker/Queue Commands
 
