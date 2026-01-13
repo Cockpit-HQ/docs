@@ -88,6 +88,15 @@
         ]
     },
     {
+        "text": "Personi",
+        "children": [
+          {
+            "text": "Introduction",
+            "link": "/personi/introduction"
+          }
+        ]
+    },
+    {
         "text": "Sync",
         "children": [
           {
